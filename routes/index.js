@@ -48,16 +48,16 @@ serialPort.open(function () {
 
     });
     
-    setInterval(function(){
-        console.log('sending for LED1: '+ led1Status);
-        console.log('sending for LED2: '+ led2Status);
-        serialPort.write(led1Status ? "1" : "0", function(err, results) {
+    // setInterval(function(){
+    //     console.log('sending for LED1: '+ led1Status);
+    //     console.log('sending for LED2: '+ led2Status);
+    //     serialPort.write(led1Status ? "1" : "0", function(err, results) {
             
-        });     
-        serialPort.write(led2Status ? "3" : "2", function(err, results) {
+    //     });     
+    //     serialPort.write(led2Status ? "3" : "2", function(err, results) {
 
-        });
-    }, 100);
+    //     });
+    // }, 100);
 });
 
 
