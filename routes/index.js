@@ -34,30 +34,20 @@ router.post('/2', function(req, res) {
 });
 
 
-var SerialPort = require("serialport").SerialPort
+var SerialPort = require("serialport")
 
 // Arduino가 /dev/tty-usbserial1 에 연결되었다고 가정합니다.
-var serialPort = new SerialPort("/dev/tty.usbmodem1421", {
-    baudrate: 9600
-}, false);
+var serialPort = new SerialPort.SerialPort("/dev/tty.usbmodem1421", {
+    baudrate: 9600,
+    parser: SerialPort.parsers.readline('\n')
+});
 
-serialPort.open(function () {
-    console.log('serial port connected');
-    serialPort.on('data', function(data) {
-        console.log('data received: ' + data);
+serialPort.on('open', function () {
+  console.log("serial port connected");
+});
 
-    });
-    
-    // setInterval(function(){
-    //     console.log('sending for LED1: '+ led1Status);
-    //     console.log('sending for LED2: '+ led2Status);
-    //     serialPort.write(led1Status ? "1" : "0", function(err, results) {
-            
-    //     });     
-    //     serialPort.write(led2Status ? "3" : "2", function(err, results) {
-
-    //     });
-    // }, 100);
+serialPort.on('data', function (data) {
+  console.log('data received: '+ data);
 });
 
 
