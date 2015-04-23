@@ -4,7 +4,7 @@
 module.exports = function(http) {
 
 var SerialPort = require("serialport")
-var serialPort = new SerialPort.SerialPort("/dev/tty.usbmodem1421", {
+var serialPort = new SerialPort.SerialPort("/dev/tty.usbserial-A601LQZY", {
     baudrate: 9600,
     parser: SerialPort.parsers.readline('\n')
 });
