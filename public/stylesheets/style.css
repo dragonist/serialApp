@@ -6,5 +6,8 @@ form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 
 #messages { list-style-type: none; margin: 0; padding: 0; }
 #messages li { padding: 5px 10px; }
 #messages li:nth-child(odd) { background: #eee; }
-#imgs img{ position:absolute; right:0px; opacity: 0;}
+#message { text-align: center; padding:1% 2%; padding-bottom: 0%; }
+#h2 {width:100%;}
+
+#imgs img{ position:absolute; right:20%; top:18%; opacity: 0;}
 #imgs img.action{ opacity: 1;}
