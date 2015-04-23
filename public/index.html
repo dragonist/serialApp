@@ -11,28 +11,22 @@
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages li { padding: 5px 10px; }
       #messages li:nth-child(odd) { background: #eee; }
+      #img { width: 30%; position:absolute; right:0px;} 
     </style>
   </head>
+
+
   <body>
+    <img id="img" src="images/pobi.gif" alt="" width="30%">
+    <p>나를 데리고 놀아줘요 뿌잉뿌잉 by 포비</p>
     <ul id="messages"></ul>
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
   </body>
+
+
   <script src="/bower_components/socket.io-client/socket.io.js"></script>
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <script>
-    var socket = io();
-    $('form').submit(function(){
-      socket.emit('chat message', $('#m').val());
-      $('#m').val('');
-      return false;
-    });
-    socket.on('chat message', function(msg){
-      $('#messages').append($('<li>').text(msg));
-    });
-    socket.on('button', function (msg) {
-      $('#messages').append($('<li>').text(msg));
-    })
-  </script>
+  <script src="/javascripts/message.js"></script>
 </html>
