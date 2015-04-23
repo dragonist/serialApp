@@ -36,7 +36,6 @@ void readTouchInputs(){
       
         if(touchStates[i] == 0){
           //pin i was just touched
-          
           Serial.println(i);
         
         }else if(touchStates[i] == 1){
@@ -46,11 +45,9 @@ void readTouchInputs(){
         touchStates[i] = 1;      
       }else{
         if(touchStates[i] == 1){
-          Serial.println(i+12);
-
           //pin i is no longer being touched
+          Serial.println(i+12);
        }
-        
         touchStates[i] = 0;
       }
     

@@ -33,22 +33,4 @@ router.post('/2', function(req, res) {
   res.render('index', {title: 'NodeJs + Arduino', msg1: msg1data, msg2: msg2data });
 });
 
-
-var SerialPort = require("serialport")
-
-// Arduino가 /dev/tty-usbserial1 에 연결되었다고 가정합니다.
-var serialPort = new SerialPort.SerialPort("/dev/tty.usbmodem1421", {
-    baudrate: 9600,
-    parser: SerialPort.parsers.readline('\n')
-});
-
-serialPort.on('open', function () {
-  console.log("serial port connected");
-});
-
-serialPort.on('data', function (data) {
-  console.log('data received: '+ data);
-});
-
-
 module.exports = router;
