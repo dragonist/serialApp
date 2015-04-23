@@ -1,4 +1,4 @@
-// var socket = io();
+var socket = io();
 
 var elImgs = document.querySelectorAll('#imgs img');
 var elImg = elImgs[0];
@@ -16,10 +16,10 @@ var messagesStorage = ['나를 데리고 놀아줘요 뿌잉뿌잉',
 //     return false;
 // });
 
-// socket.on('chat message', function(num) {
-//     getMsg(num);
-//     getImg(num);
-// });
+socket.on('chat message', function(num) {
+    getMsg(num);
+    getImg(num);
+});
 
 function getMsg(num) {
     var msg = messagesStorage[num];
