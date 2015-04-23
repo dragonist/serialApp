@@ -2,27 +2,29 @@
 <html>
   <head>
     <title>Socket.IO chat</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-      #img { width: 30%; position:absolute; right:0px;} 
-    </style>
+    <meta http-equiv="Content-Type" content="text/html charset=utf-8">
+    <link rel="stylesheet" href="stylesheets/style.css">
   </head>
 
 
   <body>
-    <img id="img" src="images/pobi.gif" alt="" width="30%">
-    <p>나를 데리고 놀아줘요 뿌잉뿌잉 by 포비</p>
-    <ul id="messages"></ul>
+    <h2 id="message">
+      
+    </h2>
+    <ul id = "imgs">
+      <li><img class="action" src="images/pobi.gif" alt="0"></li> 
+      <li><img src="images/pobi2.gif" alt="1"></li>
+      <li><img src="images/pobi2.gif" alt="2"></li>
+      <li><img src="images/pobi3.gif" alt="3"></li>
+      <li><img src="images/pobi5.jpg" alt="4"></li>
+      <li><img src="images/pobi3.gif" alt="5"></li>
+      <li><img src="images/pobi3.gif" alt="6"></li>
+    </ul>
+
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
+    
   </body>
 
 
