@@ -36,4 +36,5 @@ Xbee 가 전류의 세기를 보낸다.
 node server 는 원하는 값만 client 에 준다
 client 는 그에 맞는 메세지와 이미지를 보여준다.
 ```
-
+###아두이노 연결
+![image](https://raw.githubusercontent.com/dragonist/serialApp/master/ino/arduino.png)
